@@ -1,78 +1,88 @@
-/* Blog Form Container */
-.blog-form {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 500px;
-    transition: 0.3s;
+.addblog-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
 }
 
-.blog-form:hover {
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+.addblog-btn:hover {
+  background-color: #218838;
 }
 
-/* Form Title */
-.blog-form h2 {
-    text-align: center;
-    color: #222;
-    margin-bottom: 15px;
-    font-size: 22px;
-    font-weight: bold;
+.addblog-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
-/* Input Fields */
-.blog-form input,
-.blog-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 2px solid rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    font-size: 16px;
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(5px);
-    outline: none;
-    transition: 0.3s ease-in-out;
+.addblog-form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
-.blog-form input:focus,
-.blog-form textarea:focus {
-    border-color: #007bff;
-    background: white;
+.addblog-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #666;
 }
 
-/* Textarea */
-.blog-form textarea {
-    height: 120px;
-    resize: vertical;
+.addblog-close:hover {
+  color: #000;
 }
 
-/* Modern Buttons */
-.blog-form button {
-    width: 100%;
-    padding: 12px;
-    background: linear-gradient(to right, #007bff, #00bfff);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
+.addblog-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.blog-form button:hover {
-    background: linear-gradient(to right, #0056b3, #0088cc);
-    transform: scale(1.05);
+.addblog-form input,
+.addblog-form textarea {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-    .blog-form {
-        width: 90%;
-        padding: 20px;
-    }
+.addblog-form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.addblog-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.addblog-form button:hover {
+  background-color: #0056b3;
 }

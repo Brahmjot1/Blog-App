@@ -1,137 +1,125 @@
-/* General Styles */
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #f4f4f4, #e8e8e8);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-/* Container */
-.container {
+.bloglist-container {
     width: 90%;
     max-width: 900px;
     background: white;
     padding: 25px;
+    margin: 30px auto;
     border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
-    transition: 0.3s ease-in-out;
-}
-
-/* Heading */
-h2 {
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+  
+  .bloglist-container h2 {
     text-align: center;
-    color: #222;
-    font-size: 24px;
     margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* Blog List Styles */
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    background: #ffffff;
-    margin: 12px 0;
+  }
+  
+  .bloglist-item {
+    background: #f9f9f9;
+    margin-bottom: 15px;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
-    transition: 0.3s ease-in-out;
-}
-
-li:hover {
-    transform: translateY(-3px);
-    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.15);
-}
-
-li h3 {
-    color: #333;
-    font-size: 20px;
-    margin-bottom: 8px;
-}
-
-li p {
-    color: #666;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.08);
+  }
+  
+  .bloglist-item h3 {
+    margin: 0 0 10px;
+  }
+  
+  .bloglist-item p {
+    margin: 5px 0;
     font-size: 14px;
-    line-height: 1.6;
-}
-
-li strong {
-    color: #444;
-}
-
-/* Buttons */
-button {
-    display: inline-block;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 12px 18px;
+  }
+  
+  .bloglist-item button {
+    padding: 8px 14px;
     margin: 8px 5px;
+    background-color: #007bff;
+    border: none;
+    color: white;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 14px;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-}
-
-button.delete {
+  }
+  
+  .bloglist-item .delete {
     background-color: #dc3545;
-}
-
-button.delete:hover {
-    background-color: #a71d2a;
-}
-
-/* Edit Form */
-.edit-form {
-    background: #fff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    transition: 0.3s;
-}
-
-.edit-form input,
-.edit-form textarea {
+  }
+  
+  /* Modal Backdrop */
+  .editblog-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  /* Modal Box */
+  .editblog-modal {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .editblog-modal h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #222;
+  }
+  
+  /* Close Button */
+  .editblog-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #666;
+    cursor: pointer;
+  }
+  
+  .editblog-close:hover {
+    color: #000;
+  }
+  
+  /* Input + Textarea */
+  .editblog-modal input,
+  .editblog-modal textarea {
     width: 100%;
-    padding: 12px;
-    margin: 10px 0;
+    margin-bottom: 12px;
+    padding: 10px;
+    font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 6px;
-    font-size: 14px;
-}
-
-.edit-form button {
+  }
+  
+  .editblog-modal textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  
+  /* Submit Button */
+  .editblog-modal button {
     width: 100%;
+    padding: 12px;
     background-color: #28a745;
-}
-
-.edit-form button:hover {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .editblog-modal button:hover {
     background-color: #218838;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-        padding: 15px;
-    }
-    
-    button {
-        width: 100%;
-        padding: 10px;
-    }
-}
+  }
+  
